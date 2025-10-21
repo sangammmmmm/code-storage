@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int n;
+cin>>n;
+int arr[n];
+for (int i = 0; i < n; i++)
+{
+cin>>arr[i];
+}
+int largest =arr[0];
+int sl = INT16_MIN;
+
+for (int i = 0; i < n; i++)
+{
+if(largest<arr[i])
+{
+largest=arr[i];
+}
+}
+for (int i = 0; i < n; i++)
+{
+if(sl<arr[i]&& arr[i]!=largest)
+{
+sl=arr[i];
+}
+}
+cout<<sl;
+
+};       
